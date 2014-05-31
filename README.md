@@ -1,6 +1,6 @@
-# crazy-vh-test
+# Crazy vh test
 
-In Safari on iOS `100vh` is as high as the viewport *as long as the document is not higher than the viewport*. If the document is higher than the viewport, `100vh` is as high as the document. Which is insane. 
+In Safari on iOS `100vh` is as high as the viewport *as long as the document is not higher than the viewport*. If the document is higher than the viewport, `100vh` is as high as the document. Which is insane.
 
 ## The solution
 
