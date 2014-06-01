@@ -22,7 +22,7 @@ var readyStateCheckInterval = setInterval(function() {
 	    // If 100vh is higher than the viewport, vh is not supported well
 	    if (dHeight > bHeight) {
 	        // add a class the HTML element for alternative styling
-	        document.documentElement.className += ' crazy-vh';
+	        document.documentElement.classList.add('crazy-vh');
 	    }
 	    // Delete the elements
 	    document.documentElement.removeChild(a);
