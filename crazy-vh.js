@@ -12,18 +12,21 @@ a.setAttribute('style','height:2000em');
 b.setAttribute('style','height:100vh');
 
 // wrap it all in a timeout, or it won't work
-setTimeout(function(){
-    // Add something, ot it won't work
-    b.innerHTML = '1';
-    var dHeight = b.clientHeight;
-    var bHeight = window.innerHeight;
+var readyStateCheckInterval = setInterval(function() {
+	if (document.readyState === "complete") {
+	    // Add something, ot it won't work
+	    b.innerHTML = '1';
+	    var dHeight = b.clientHeight;
+	    var bHeight = window.innerHeight;
 
-    // If 100vh is higher than the viewport, vh is not supported well
-    if (dHeight > bHeight) {
-        // add a class the HTML element for alternative styling
-        document.documentElement.className += ' crazy-vh';
-    }
-    // Delete the elements
-    document.documentElement.removeChild(a);
-    document.documentElement.removeChild(b);
-},1);
+	    // If 100vh is higher than the viewport, vh is not supported well
+	    if (dHeight > bHeight) {
+	        // add a class the HTML element for alternative styling
+	        document.documentElement.className += ' crazy-vh';
+	    }
+	    // Delete the elements
+	    document.documentElement.removeChild(a);
+	    document.documentElement.removeChild(b);
+		clearInterval(readyStateCheckInterval);
+	}
+}, 10);
