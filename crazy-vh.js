@@ -14,7 +14,7 @@ b.setAttribute('style','height:100vh');
 // wrap it all in a timeout, or it won't work
 var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
-	    // Add something, ot it won't work
+	    // Add something, or it won't work
 	    b.innerHTML = '1';
 	    var dHeight = b.clientHeight;
 	    var bHeight = window.innerHeight;
