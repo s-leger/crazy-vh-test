@@ -24,7 +24,7 @@ var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
 	    // Add something, or it won't work
 	    b.innerHTML = '1';
-	    var dHeight = b.clientHeight;
+	    var dHeight = b.clientHeight - 69;
 	    var bHeight = window.innerHeight;
 
 	    // If 100vh is higher than the viewport, vh is not supported well
